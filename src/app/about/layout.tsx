@@ -1,11 +1,13 @@
 import React from 'react'
 
-const AboutPage = ({}) => {
+// Tạo layout.tsx và layout này sẽ là thằng cha tất cả các page khi được khai báo bởi param children 
+const AboutLayout = ({children}: {children: React.ReactNode}) => {
   return (
     <div>
-        <h1>THIS IS ABOUT LAYOUT</h1>
+        <h1>THIS IS THE ABOUT LAYOUT</h1>
+        {children}
     </div>
   )
 }
 
-export default AboutPage
+export default AboutLayout
