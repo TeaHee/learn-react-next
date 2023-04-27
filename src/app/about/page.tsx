@@ -1,5 +1,10 @@
 import React from 'react'
 
+// Có thể setting riêng cho từng page
+export const metadata = {
+  title: 'About Page',
+}
+
 const AboutPage = () => {
   return (
     <div>

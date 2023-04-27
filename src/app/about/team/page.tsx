@@ -1,5 +1,10 @@
 import React from 'react'
 
+// Nếu không có setting cho <meta> thì sẽ lấy data <meta> của ./src/app/layout.tsx để hiển thị
+// export const metadata = {
+//   title: 'Team Page',
+// }
+
 // Page nested
 const TeamPage = () => {
   return (
