@@ -1,13 +1,18 @@
 import './globals.css'
-import { Inter } from 'next/font/google'
 
-const inter = Inter({ subsets: ['latin'] })
+// import font from lib next 
+import { Inter } from 'next/font/google'
+import { Poppins } from 'next/font/google'
+
+const inter = Inter({ subsets: ['vietnamese'] })
+const poppins = Poppins({ weight: ['400', '700'], subsets: ['latin']})
 
 // metadata setting cho <meta>
 export const metadata = {
   title: 'Learn ReactJs with NextJs',
   description: 'lorem ipsum dolor sit amet, consectetur adip',
-  keywords: 'lorem ipsum dolor sit amet'
+  // keywords dùng cho SEO
+  keywords: 'web development, web design, typescript, reactjs, nextjs'
 }
 
 export default function RootLayout({
@@ -17,7 +22,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={poppins.className}>
+        <main className='container'>{children}</main>
+      </body>
     </html>
   )
 }
