@@ -1,10 +1,14 @@
 import React from 'react'
 import Link from 'next/link';
 import {FaStar, FaCodeBranch, FaEye} from 'react-icons/fa'
+import { resolve } from 'path';
 
 // hàm gọi api
 async function fetchData() {
     const request = await fetch('https://api.github.com/users/bradtraversy/repos')
+
+    await new Promise((resolve) => setTimeout(resolve, 1000)) // chờ 1s trước khi trả về data được gọi từ api
+
     const data = await request.json();
     return data;
 }
