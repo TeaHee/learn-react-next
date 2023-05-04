@@ -11,8 +11,12 @@ const RepoPage = ({params}: any) => {
   return (
     <div className='card'>
       <Link href={'/code/repos'} className='btn btn-back'>Back to Repositories</Link>
-      <Repo name={params.name}></Repo>
-      <RepoDirs name={params.name}></RepoDirs>
+
+      {/* @ts-expect-error Server Component */}
+      <Repo name={params.name} />
+
+      {/* @ts-expect-error Server Component */}
+      <RepoDirs name={params.name} />
     </div>
   )
 }
