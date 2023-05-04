@@ -1,7 +1,6 @@
 import React from 'react'
 import Link from 'next/link';
 import {FaStar, FaCodeBranch, FaEye} from 'react-icons/fa'
-import { resolve } from 'path';
 
 // hàm gọi api
 async function fetchData() {
