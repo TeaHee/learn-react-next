@@ -24,6 +24,7 @@ const ReposPage = async () => {
             {response.map((data: any) => (
                 // hiển thị dữ liệu từ api bằng cặp `{}`
                 <li key={data.id}>
+                    {/* Khi navigate với data được lấy từ api, nextjs sẽ nhận biết được router tree khi có thư mục có tên [name] */}
                     <Link href={`/code/repos/${data.name}`}>
                         <h3>{data.name}</h3>
                         <p>{data.description}</p>
