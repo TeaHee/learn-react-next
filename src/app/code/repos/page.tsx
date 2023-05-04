@@ -2,13 +2,15 @@ import React from 'react'
 import Link from 'next/link';
 import {FaStar, FaCodeBranch, FaEye} from 'react-icons/fa'
 
+// hàm gọi api
 async function fetchData() {
-    const response = await fetch('https://api.github.com/users/bradtraversy/repos')
-    const data = await response.json();
+    const request = await fetch('https://api.github.com/users/bradtraversy/repos')
+    const data = await request.json();
     return data;
 }
 
 const ReposPage = async () => {
+    // vì hàm fetchData là synchronous nên phải dùng await
     const response = await fetchData()
 
   return (
@@ -16,6 +18,7 @@ const ReposPage = async () => {
         <h2>Repositories</h2>
         <ul className="repo-list">
             {response.map((data: any) => (
+                // hiển thị dữ liệu từ api bằng cặp `{}`
                 <li key={data.id}>
                     <Link href={`/code/repos/${data.name}`}>
                         <h3>{data.name}</h3>
