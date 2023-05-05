@@ -5,6 +5,6 @@ Gồm 3 giai đoạn:
  - Qua nhiều thay đổi (Updating)
  - Bị huỷ bỏ (Unmounting)
 
-![Diagram lifecycle](D:\Learn ReactJs\learn-react-next\diagram-lifecycle.png)
+![Diagram lifecycle](https://github.com/TeaHee/learn-react-next/blob/main/diagram-lifecycle.png)
 
 Link tham khảo: https://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/
