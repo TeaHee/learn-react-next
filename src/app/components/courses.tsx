@@ -1,20 +1,7 @@
 import React from 'react'
 import Link from 'next/link'
 
-async function fetchCourses() {
-    try {
-        let url = process.env.NODE_ENV === 'development' ? process.env.NEXT_PUBLIC_BASE_URL_DEVELOPMENT :  process.env.NEXT_PUBLIC_BASE_URL_PRODUCTION
-        const request = await fetch(`${url}/api/courses`)
-        const courses = await request.json();
-        return courses;
-    } catch (error) {
-        console.error("api error", { error });
-        throw error;
-    }
-}
-
-const courses = async () => {
-    const courses = await fetchCourses()
+const courses = ({courses}:any) => {
   return (
     <div className='courses'>
         {courses.map((data:any) => (
