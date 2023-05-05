@@ -1,9 +1,8 @@
 import React from 'react'
 import Link from 'next/link'
-import { environment } from '../../../enviroment';
 
 async function fetchCourese() {
-    const request = await fetch(`${environment.baseUrl}/api/courses`)
+    const request = await fetch(`${process.env.BASE_URL}/api/courses`)
     const courses = await request.json();
     return courses;
 }
