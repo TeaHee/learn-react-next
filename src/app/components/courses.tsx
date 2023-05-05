@@ -2,7 +2,7 @@ import React from 'react'
 import Link from 'next/link'
 
 async function fetchCourese() {
-    const request = await fetch(`${process.env.BASE_URL}/api/courses`)
+    const request = await fetch(`${process.env.BASE_URL_PRODUCTION}/api/courses`)
     const courses = await request.json();
     return courses;
 }
