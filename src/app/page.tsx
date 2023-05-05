@@ -10,7 +10,7 @@ const HomePage = () => {
       <h1>Welcome to Learn React + Next</h1>
       
       {/* @ts-expect-error Server Component */}
-      <Courses></Courses>
+      <Courses />
     </>
   )
 }
