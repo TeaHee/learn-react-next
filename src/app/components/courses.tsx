@@ -2,9 +2,7 @@ import React from 'react'
 import Link from 'next/link'
 
 async function fetchCourses() {
-    let url = process.env.NODE_ENV === 'development' ? process.env.BASE_URL_DEVELOPMENT :  process.env.BASE_URL_PRODUCTION
-    console.log("NODE_ENV ::", `${process.env.NODE_ENV }`)
-    console.log("url::", `${url}`)
+    let url = process.env.NODE_ENV === 'development' ? process.env.NEXT_PUBLIC_BASE_URL_DEVELOPMENT :  process.env.NEXT_PUBLIC_BASE_URL_PRODUCTION
     const request = await fetch(`${url}/api/courses`)
     const courses = await request.json();
     return courses;
